@@ -1,36 +1,18 @@
 <?php
-$classi = [
-    [
-        'nome' => '1A',
-        'studenti' => [
-            ['nome' => 'Marco', 'cognome' => 'Rossi'],
-            ['nome' => 'Laura', 'cognome' => 'Bianchi'],
-            ['nome' => 'Giovanni', 'cognome' => 'Verdi'],
-        ]
-    ],
-    [
-        'nome' => '2A',
-        'studenti' => [
-            ['nome' => 'Sofia', 'cognome' => 'Russo'],
-            ['nome' => 'Andrea', 'cognome' => 'Ferrari'],
-            ['nome' => 'Giulia', 'cognome' => 'Esposito'],
-        ]
-    ],
-    [
-        'nome' => '3A',
-        'studenti' => [
-            ['nome' => 'Francesco', 'cognome' => 'Romano'],
-            ['nome' => 'Alessia', 'cognome' => 'Colombo'],
-            ['nome' => 'Davide', 'cognome' => 'Ricci'],
-        ]
-    ],
-];
+require_once 'classes.php';
 
-foreach ($classi as $classe) {
-    echo "<h2>Classe {$classe['nome']}</h2>";
+foreach ($classi as $nomeClasse => $studenti) {
+    echo "<h2>$nomeClasse</h2>";
     echo "<ul>";
-    foreach ($classe['studenti'] as $studente) {
-        echo "<li>{$studente['nome']} {$studente['cognome']}</li>";
+    foreach ($studenti as $studente) {
+        echo "<li>";
+        echo "ID: {$studente['id']}, ";
+        echo "Nome: {$studente['nome']}, ";
+        echo "Cognome: {$studente['cognome']}, ";
+        echo "Età: {$studente['anni']}, ";
+        echo "Voto medio: {$studente['voto_medio']}, ";
+        echo "Linguaggio preferito: {$studente['linguaggio_preferito']}";
+        echo "</li>";
     }
     echo "</ul>";
 }
