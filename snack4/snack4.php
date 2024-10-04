@@ -10,7 +10,6 @@ require_once 'classes.php';
     <title>Filtro Studenti</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -59,8 +58,8 @@ require_once 'classes.php';
         $linguaggio = '';
         $nome = '';
         $cognome = '';
-        $eta_min = 0;
-        $eta_max = 150;
+        $eta_min = 20;
+        $eta_max = 40;
         $classe_filtro = '';
 
         if (isset($_GET['voto_max'])) {
@@ -134,7 +133,7 @@ require_once 'classes.php';
         ?>
     </div>
 
-    <!-- Bootstrap JS (optional) -->
+    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
