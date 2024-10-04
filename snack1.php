@@ -47,6 +47,5 @@ foreach ($posts as $date => $dailyPosts) {
         echo "<h3>{$post['title']}</h3>";
         echo "<p>Autore: {$post['author']}</p>";
         echo "<p>{$post['text']}</p>";
-        echo "<hr>";
     }
 }
