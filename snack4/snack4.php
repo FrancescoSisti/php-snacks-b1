@@ -62,28 +62,6 @@ require_once 'classes.php';
         $eta_max = 40;
         $classe_filtro = '';
 
-        if (isset($_GET['voto_max'])) {
-            $voto_max = $_GET['voto_max'];
-        }
-        if (isset($_GET['linguaggio'])) {
-            $linguaggio = $_GET['linguaggio'];
-        }
-        if (isset($_GET['nome'])) {
-            $nome = $_GET['nome'];
-        }
-        if (isset($_GET['cognome'])) {
-            $cognome = $_GET['cognome'];
-        }
-        if (isset($_GET['eta_min'])) {
-            $eta_min = $_GET['eta_min'];
-        }
-        if (isset($_GET['eta_max'])) {
-            $eta_max = $_GET['eta_max'];
-        }
-        if (isset($_GET['classe'])) {
-            $classe_filtro = $_GET['classe'];
-        }
-
         foreach ($classi as $nomeClasse => $studenti) {
             if (empty($classe_filtro) || stripos($nomeClasse, $classe_filtro) !== false) {
                 echo "<h2 class='mt-4'>" . $nomeClasse . "</h2>";
