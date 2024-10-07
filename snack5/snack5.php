@@ -4,7 +4,7 @@ require_once 'functions.php';
 $result = '';
 if (isset($_GET['word'])) {
     $word = $_GET['word'];
-    $result = nonSoComeFare($word) ? 'è palindroma' : 'non è palindroma';
+    $result = nonSoComeFare($word);
 }
 ?>
 
